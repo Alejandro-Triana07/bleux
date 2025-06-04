@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.encabezado {
+    background: #1e172f;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navegacion {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-texto {
+    background: white;
+    padding: 12px 2px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.logo-descripcion {
+    color: white;
+    font-size: 14px;
+}
+
+.logo-descripcion strong {
+    font-size: 18px;
+}
+
+.menu-navegacion {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header {
+    color: black;
+    background-color: #22c55e;
+}
+
+.enlace-menu {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.enlace-menu:hover {
+    color: white;
+}
+
+.boton-descarga {
+    background: #6366f1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.boton-descarga:hover {
+    background: #5856eb;
+}
+
+/* SECCIÓN PRINCIPAL */
+.seccion-principal {
+    background: linear-gradient(135deg, #4a4a7a 0%, #6b46c1 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo con hojas */
+.seccion-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: url('../assets/images/hojasFondo.jpg') center/cover;
+    z-index: 1;
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-principal {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.descripcion-principal {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.botones-accion {
+    display: flex;
+    gap: 1rem;
+}
+
+.boton-primario {
+    background: transparent;
+    color: #ec4899;
+    border: 2px solid #ec4899;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.boton-primario:hover {
+    background: #ec4899;
+    color: white;
+}
+
+.boton-secundario {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.boton-secundario:hover {
+    background: white;
+    color: #4a4a7a;
+}
+
+.contenedor-telefono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-telefono {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+    z-index: 3;
+    position: relative;
+}
+
+/* SECCIÓN FUNCIONALIDADES */
+.seccion-funcionalidades {
+    background: #f8fafc;
+    padding: 6rem 0;
+}
+
+.contenedor-funcionalidades {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.titulo-funcionalidades {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ec4899;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contenido-funcionalidades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.imagen-computador {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.subtitulo-funcionalidades {
+    font-size: 2rem;
+    color: #ec4899;
+    margin-bottom: 1rem;
+}
+
+.texto-funcionalidades {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.texto-marketing {
+    color: #ec4899;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.lista-caracteristicas {
+    list-style: none;
+    color: #64748b;
+}
+
+.lista-caracteristicas li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* SECCIÓN PRECIOS */
+.seccion-precios {
+    background: #1e293b;
+    padding: 6rem 0;
+    color: white;
+}
+
+.contenedor-precios {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.titulo-precios {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.descripcion-precios {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.tarjeta-precio {
+    background: white;
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-precio:hover {
+    transform: translateY(-10px);
+}
+
+.icono-tarjeta {
+    margin-bottom: 1rem;
+}
+
+.icono-plan {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.nombre-plan {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.precio {
+    margin-bottom: 2rem;
+}
+
+.numero-precio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.periodo-precio {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-left: 5px;
+}
+
+.lista-caracteristicas-plan {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.lista-caracteristicas-plan li {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.caracteristica-disponible {
+    color: #22c55e;
+}
+
+.descripcion-plan {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.boton-suscripcion {
+    width: 100%;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-suscripcion-lite {
+    background: #ec4899;
+    color: white;
+}
+
+.boton-suscripcion-lite:hover {
+    background: #db2777;
+}
+
+.boton-suscripcion-standard {
+    background: #1e293b;
+    color: white;
+}
+
+.boton-suscripcion-standard:hover {
+    background: #334155;
+}
+
+.boton-suscripcion-ultimate {
+    background: #1e293b;
+    color: white;
+}
+
+.boton-suscripcion-ultimate:hover {
+    background: #334155;
+}
+
+/* PIE DE PÁGINA */
+.pie-pagina {
+    background: #0f172a;
+    padding: 2rem 0;
+    color: white;
+}
+
+.contenedor-pie {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.texto-pie {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.enlace-mixte {
+    color: #ec4899;
+    font-weight: 600;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 1rem;
+}
+
+.enlace-red-social {
+    color: #94a3b8;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.enlace-red-social:hover {
+    color: white;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .navegacion {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .menu-navegacion {
+        gap: 1rem;
+    }
+    
+    .contenedor-principal {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .titulo-principal {
+        font-size: 2.5rem;
+    }
+    
+    .contenido-funcionalidades {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contenedor-pie {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
