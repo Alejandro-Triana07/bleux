@@ -12,11 +12,11 @@ body {
 
 .encabezado {
     background: #1e172f;
-    padding: 1rem 0;
+    padding: 1rem 11rem;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .navegacion {
@@ -75,7 +75,7 @@ body {
 }
 
 .boton-descarga {
-    background: #6366f1;
+    background: #0a0de0;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -90,37 +90,10 @@ body {
 
 /* SECCIÓN PRINCIPAL */
 .seccion-principal {
-    background: linear-gradient(135deg, #4a4a7a 0%, #6b46c1 100%);
-    min-height: 100vh;
+    background: #2e2550;
     display: flex;
     align-items: center;
     padding-top: 80px;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Fondo con hojas */
-.seccion-principal::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 55%;
-    height: 100%;
-    background: url('../assets/images/hojasFondo.jpg') center/cover;
-    z-index: 1;
-}
-
-.contenedor-principal {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 2;
 }
 
 .titulo-principal {
@@ -145,18 +118,18 @@ body {
 
 .boton-primario {
     background: transparent;
-    color: #ec4899;
-    border: 2px solid #ec4899;
+    color: #f41988;
+    border: 2px solid white;
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 900;
     transition: all 0.3s ease;
 }
 
 .boton-primario:hover {
-    background: #ec4899;
-    color: white;
+    background: #ffffff;
+    color: #f41988;
 }
 
 .boton-secundario {
@@ -176,17 +149,18 @@ body {
 }
 
 .contenedor-telefono {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	background: linear-gradient(rgba(57, 44, 70, 0.5), rgba(57, 44, 70, 0.5)), url(../assets/images/hojasFondo.jpg);
+	width: 50%;
+	background-position: center center;
+	align-content: center;
+	padding: 15% 0 7% 7%;
+	background-size: cover;
+
 }
 
-.imagen-telefono {
-    max-width: 300px;
-    height: auto;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-    z-index: 3;
-    position: relative;
+.contenido-izquierdo{
+    width: 50%;
+    padding-left: 15%;
 }
 
 /* SECCIÓN FUNCIONALIDADES */
@@ -204,7 +178,7 @@ body {
 .titulo-funcionalidades {
     font-size: 3rem;
     font-weight: bold;
-    color: #ec4899;
+    color: #f41486;
     text-align: center;
     margin-bottom: 4rem;
 }
@@ -225,7 +199,7 @@ body {
 
 .subtitulo-funcionalidades {
     font-size: 2rem;
-    color: #ec4899;
+    color: #ca5391;
     margin-bottom: 1rem;
 }
 
@@ -238,7 +212,7 @@ body {
 
 .texto-marketing {
     color: #ec4899;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
@@ -252,9 +226,14 @@ body {
     font-size: 0.95rem;
 }
 
+.lista-caracteristicas i{
+    color: #f41486;
+    margin-right: 1%;
+}
+
 /* SECCIÓN PRECIOS */
 .seccion-precios {
-    background: #1e293b;
+    background: #1e172f;
     padding: 6rem 0;
     color: white;
 }
@@ -302,6 +281,11 @@ body {
 
 .icono-tarjeta {
     margin-bottom: 1rem;
+}
+
+.lista-caracteristicas-plan .color{
+     color: #f41486;
+    margin-right: 1%;
 }
 
 .icono-plan {
