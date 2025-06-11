@@ -75,17 +75,12 @@ body {
 }
 
 .boton-descarga {
-    background: #0a0de0;
+    background: linear-gradient(90deg, #883ED5, #067DD5);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 14px;
-    transition: background 0.3s ease;
-}
-
-.boton-descarga:hover {
-    background: #5856eb;
 }
 
 /* SECCIÓN PRINCIPAL */
@@ -117,35 +112,22 @@ body {
 }
 
 .boton-primario {
-    background: transparent;
+    background-color: #ffffff;
     color: #f41988;
     border: 2px solid white;
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 900;
-    transition: all 0.3s ease;
-}
-
-.boton-primario:hover {
-    background: #ffffff;
-    color: #f41988;
 }
 
 .boton-secundario {
-    background: transparent;
     color: white;
     border: 2px solid white;
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.boton-secundario:hover {
-    background: white;
-    color: #4a4a7a;
 }
 
 .contenedor-telefono {
@@ -234,8 +216,8 @@ body {
 /* SECCIÓN PRECIOS */
 .seccion-precios {
     background: #1e172f;
-    padding: 6rem 0;
     color: white;
+    padding: 4% 0;
 }
 
 .contenedor-precios {
@@ -268,15 +250,11 @@ body {
 .tarjeta-precio {
     background: white;
     color: #333;
-    padding: 2rem;
+    padding: 4% 0;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-}
-
-.tarjeta-precio:hover {
-    transform: translateY(-10px);
 }
 
 .icono-tarjeta {
@@ -284,9 +262,32 @@ body {
 }
 
 .lista-caracteristicas-plan .color{
-     color: #f41486;
+    color: #f41486;
     margin-right: 1%;
 }
+
+.lista-caracteristicas-plan li {
+	text-align: center;
+	line-height: 1.8;
+	position: relative;
+}
+.lista-caracteristicas-plan li i {
+	position: absolute;
+	left: 0;
+    font-size: 130%;
+    width: 30%;
+}
+
+.lista-caracteristicas li i{
+    font-size: 130%;
+}
+
+.lista-caracteristicas-plan .col{
+    color: #282240;
+    width: 30%;
+}
+
+
 
 .icono-plan {
     width: 60px;
@@ -303,6 +304,9 @@ body {
 
 .precio {
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
 }
 
 .numero-precio {
@@ -318,15 +322,17 @@ body {
 }
 
 .lista-caracteristicas-plan {
+    width: 90%;
     list-style: none;
     text-align: left;
     margin-bottom: 2rem;
 }
 
-.lista-caracteristicas-plan li {
-    margin-bottom: 0.8rem;
+.lista-caracteristicas-plan li{
+    width: 100%;
+    margin-bottom: 0.8rem;  
     font-size: 0.9rem;
-    color: #64748b;
+    color: #6b6b6b;
 }
 
 .caracteristica-disponible {
@@ -335,10 +341,10 @@ body {
 
 .descripcion-plan {
     font-size: 0.85rem;
-    color: #64748b;
+    color: #6b6b6b;
     line-height: 1.5;
     margin-bottom: 2rem;
-    text-align: left;
+    text-align: center  ;
 }
 
 .boton-suscripcion {
@@ -352,6 +358,7 @@ body {
 }
 
 .boton-suscripcion-lite {
+    width: 68%;
     background: #ec4899;
     color: white;
 }
@@ -361,28 +368,21 @@ body {
 }
 
 .boton-suscripcion-standard {
-    background: #1e293b;
+    width: 68%;
+    background: #2e2550;
     color: white;
-}
-
-.boton-suscripcion-standard:hover {
-    background: #334155;
 }
 
 .boton-suscripcion-ultimate {
-    background: #1e293b;
+    width: 68%;
+    background: #2e2550;
     color: white;
-}
-
-.boton-suscripcion-ultimate:hover {
-    background: #334155;
 }
 
 /* PIE DE PÁGINA */
 .pie-pagina {
-    background: #0f172a;
+    background: #ffffff;
     padding: 2rem 0;
-    color: white;
 }
 
 .contenedor-pie {
@@ -390,13 +390,12 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 0 2rem;
 }
 
 .texto-pie {
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: #7f7f7f;
 }
 
 .enlace-mixte {
@@ -406,54 +405,10 @@ body {
 
 .redes-sociales {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .enlace-red-social {
-    color: #94a3b8;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.enlace-red-social:hover {
-    color: white;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-    .navegacion {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .menu-navegacion {
-        gap: 1rem;
-    }
-    
-    .contenedor-principal {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
-    
-    .titulo-principal {
-        font-size: 2.5rem;
-    }
-    
-    .contenido-funcionalidades {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .contenedor-tarjetas {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .contenedor-pie {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
+    color: #3f3f3f;
+    font-size: 1.3rem;
 }
